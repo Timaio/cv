@@ -1,0 +1,97 @@
+body {
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(48deg, rgba(236,236,236,1) 0%, rgba(255,255,255,1) 100%);
+}
+
+.icon {
+  width: 17px;
+  text-align: center;
+}
+
+.columns {
+  margin-left: 0 !important;
+}
+
+.main {
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.card-container {
+  padding: 0 30px 30px;
+}
+
+.card-container p {
+  margin-bottom: 0.4rem;
+}
+
+.card-container h2 {
+  font-size: 1.8rem;
+  margin-top: 3.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+}
+
+
+/* Left sidebar */
+.sidebar {
+  color: white;
+  background-color: rgb(46, 68, 154);
+}
+
+.photo {
+  width: 100%;
+  padding: 40px 0;
+}
+
+.photo img {
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.skill {
+  display: inline-block;
+  margin-bottom: 8px;
+  margin-left: 3px;
+  padding: 5px 10px;
+  background-color: #222222;
+}
+
+
+/* About */
+.about {
+  color: white;
+  background: linear-gradient(32deg, rgba(31,29,32,1) 0%, rgba(44,43,45,1) 100%);
+}
+
+.position {
+  padding: 5px 10px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  color: white;
+  background-color: rgb(46, 68, 154);
+}
+
+.name {
+  margin-bottom: 1rem;
+  padding-top: 30px;
+  font-size: 2.4em;
+  font-weight: 900;
+  color: white;
+}
+
+.year {
+  display: inline-block;
+  margin-right: 7px;
+  padding: 4px 10px;
+  font-size: 1.6rem;
+  color: white;
+  background-color: rgb(46, 68, 154);
+}
