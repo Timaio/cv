@@ -1,7 +1,37 @@
-body {
-  height: 100vh;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
   margin: 0;
-  background: linear-gradient(48deg, rgba(236,236,236,1) 0%, rgba(255,255,255,1) 100%);
+}
+
+body {
+  background: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+.mt {
+  margin-top: 30px;
+}
+
+.color-reverse {
+  color: white;
+}
+
+.color-reverse a {
+  color: #afd1f8;
+}
+
+.color-reverse a:hover {
+  color: #8ebaed;
 }
 
 .icon {
@@ -9,13 +39,18 @@ body {
   text-align: center;
 }
 
-.columns {
-  margin-left: 0 !important;
-}
-
-.main {
+.container {
+  max-width: 1200px;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+    "A B"
+    "A C";
+  grid-template-columns: 3fr 7fr;
+  grid-template-rows: auto 1fr;
   background-color: white;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .card-container {
@@ -27,17 +62,17 @@ body {
 }
 
 .card-container h2 {
-  font-size: 1.8rem;
-  margin-top: 3.2rem;
+  margin-top: 1.6rem;
   margin-bottom: 0.4rem;
-  letter-spacing: 0.1rem;
+  font-size: 1.7rem;
   font-weight: 600;
+  letter-spacing: 0.1rem;
 }
 
 
-/* Left sidebar */
-.sidebar {
-  color: white;
+/* Left side */
+.side {
+  grid-area: A;
   background-color: rgb(46, 68, 154);
 }
 
@@ -48,8 +83,8 @@ body {
 
 .photo img {
   display: block;
-  width: 200px;
-  height: 200px;
+  width: 170px;
+  height: 170px;
   margin: 0 auto;
   border-radius: 50%;
   object-fit: cover;
@@ -65,8 +100,9 @@ body {
 
 
 /* About */
-.about {
-  color: white;
+.header {
+  grid-area: B;
+  padding-bottom: 30px;
   background: linear-gradient(32deg, rgba(31,29,32,1) 0%, rgba(44,43,45,1) 100%);
 }
 
@@ -75,6 +111,7 @@ body {
   font-size: 1.8rem;
   font-weight: 600;
   letter-spacing: 0.1rem;
+  text-transform: uppercase;
   color: white;
   background-color: rgb(46, 68, 154);
 }
@@ -82,16 +119,46 @@ body {
 .name {
   margin-bottom: 1rem;
   padding-top: 30px;
-  font-size: 2.4em;
+  font-size: 2.2em;
   font-weight: 900;
+  text-transform: uppercase;
   color: white;
 }
 
+.main {
+  grid-area: C;
+  line-height: 1.4rem;
+}
+
 .year {
-  display: inline-block;
-  margin-right: 7px;
-  padding: 4px 10px;
+  display: block;
+  width: fit-content;
+  margin: 9px 7px 4px 0;
+  padding: 5px 10px;
   font-size: 1.6rem;
   color: white;
   background-color: rgb(46, 68, 154);
+}
+
+@media (max-width: 700px) {
+  .container {
+    grid-template-areas:
+      "B B"
+      "A C";
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    grid-template-areas:
+      "B B"
+      "A A"
+      "C C";
+  }
+}
+
+@media (max-width: 450px) {
+  .card-container {
+    padding: 0 17px 17px;
+  }
 }
